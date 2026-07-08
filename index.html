@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>netroot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: #0D0A14;
+    color: #F8F4EC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+  }
+
+  .wordmark {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+    text-transform: lowercase;
+    color: #C9A84C;
+    margin-bottom: 4rem;
+  }
+
+  .sites {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .site-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #F8F4EC;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .site-link:hover { color: #C9A84C; }
+
+  .site-sub {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #4A4058;
+    margin-top: 0.4rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wordmark">netroot</div>
+  <nav class="sites">
+    <a class="site-link" href="/la-mystique-divine/">Divine Mysticism<span class="site-sub">J. Ribet · Four Volumes</span></a>
+    <a class="site-link" href="https://bostontrip2026.netroot.io">Boston 2026<span class="site-sub">Trip Itinerary</span></a>
+    <a class="site-link" href="https://capecoraltrip2026.netroot.io">Cape Coral 2026<span class="site-sub">Trip Itinerary</span></a>
+  </nav>
+</body>
+</html>
