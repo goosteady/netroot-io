@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 1.5rem 4rem;
+    padding: 3rem 1.5rem 5rem;
   }
 
   .wordmark {
@@ -34,64 +34,125 @@
   h1 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     text-align: center;
   }
 
-  .subtitle {
+  .byline {
     font-family: 'Jost', sans-serif;
     font-size: 0.65rem;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: #4A4058;
-    margin-top: 0.6rem;
-    margin-bottom: 2.5rem;
+    margin-top: 0.7rem;
+    margin-bottom: 3rem;
+    text-align: center;
   }
 
-  .reader {
+  main {
+    max-width: 640px;
     width: 100%;
-    max-width: 900px;
-    aspect-ratio: 4 / 3;
-    border: 1px solid #2A2436;
-    background: #050308;
   }
 
-  .reader iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .links {
-    margin-top: 2rem;
-    display: flex;
-    gap: 2rem;
-  }
-
-  .links a {
+  h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #C9A84C;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  main :first-child h2 { margin-top: 0; }
+
+  p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1.1rem;
+    color: #E8E1D3;
+  }
+
+  .signature {
+    font-style: italic;
+    text-align: right;
+    color: #A99BC2;
+  }
+
+  .cta-row {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-row a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
     color: #F8F4EC;
     text-decoration: none;
     border-bottom: 1px solid #4A4058;
+    padding-bottom: 2px;
     transition: color 0.2s ease, border-color 0.2s ease;
   }
 
-  .links a:hover { color: #C9A84C; border-color: #C9A84C; }
+  .cta-row a:hover { color: #C9A84C; border-color: #C9A84C; }
+
+  .source-note {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #2A2436;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    color: #4A4058;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .source-note a { color: #6B5F82; }
 </style>
 </head>
 <body>
   <a class="wordmark" href="/">netroot</a>
   <h1>The Practice of Humility</h1>
-  <span class="subtitle">Archive.org</span>
+  <span class="byline">A Treatise by His Holiness Leo XIII &middot; Translated by Joseph Jerome Vaughan, O.S.B., 1888</span>
 
-  <div class="reader">
-    <iframe src="https://archive.org/embed/ThePracticeOfHumility" allowfullscreen webkitallowfullscreen></iframe>
+  <main>
+    <section>
+      <h2>Preface of the Translator</h2>
+      <p>Cardinal Newman, when speaking in the Birmingham Oratory last January, on the occasion of the Papal Jubilee, said: &ldquo;The Holy Father lived a long life before he became Pope, and little was known of him, yet he has now in the few years that he has become Pope done things which it may be said no other man could do. I scarcely suppose that any of you here present had heard his name before he was made Pope. There did not seem any likelihood that he would ever leave Perugia, his bishopric, but he was found&mdash;as others have been found&mdash;by a special providence and inspiration of God, and we in our ignorance knew nothing of him.&rdquo;</p>
+      <p>This golden treatise on <em>The Practice of Humility</em>, from the pen of the reigning Sovereign Pontiff, now presented to the English public, comes then as a revelation, and lifts the veil which hitherto has concealed from view the long years of his comparative seclusion spent in Perugia. It shows us the work divine grace was achieving in his heart during that time of his &ldquo;hidden life&rdquo; of unconscious preparation for the tiara, and teaches us the school in which his grand character and lofty genius were formed and mellowed.</p>
+      <p>Though dedicated to his Seminarists, the book will be found very suitable to all classes and conditions of men. Is there not reason to think it will even be so cherished by the faithful as to rank with the &ldquo;Imitation&rdquo; and the &ldquo;Spiritual Combat?&rdquo; So true to life are its admonitions, so profound and searching its lessons, that throughout the Holy Father seems to speak as the spiritual director of every individual soul, as the physician of each human heart, and as the Good Shepherd seeking out the lost sheep.</p>
+      <p>In conclusion, His Holiness has embellished this treatise with a rich appendix of various thoughts culled from spiritual writers, and preceded by the sermon of the great Bishop of Hippo upon the &ldquo;Fear of God and True Humility.&rdquo;</p>
+      <p class="signature">Joseph Jerome Vaughan, O.S.B.<br>Monte Cassino, Whitsuntide, 1888</p>
+    </section>
+
+    <section>
+      <h2>Dedication</h2>
+      <p>Joachim Cardinal Pecci, Bishop of Perugia, to his most beloved Sons, the Seminarists.</p>
+      <p>The foundation of Christian perfection, according to the common teaching of the holy fathers, is humility. &ldquo;In order to become great,&rdquo; says St. Augustine, &ldquo;it is necessary to begin by being little. You are desirous of building up the edifice of Christian virtues; know you then the immense height. Endeavour, therefore, at once to lay its foundations very deep in humility.&rdquo; Now this little treatise, which We dedicate to you, O dearly beloved sons, teaches you to lay the foundations of Christian perfection.</p>
+      <p>This same means will enable you to subdue the pride of the world, and to implant in the hearts of all men the mortification and the humility of the cross. Since Jesus Christ did not teach until He had first practiced, you also, following His example, should enter upon the sacred ministry already well grounded in The Practice of Humility.</p>
+      <p>Let each one of you in particular, then, be that scholar, who in this little treatise which We dedicate to you, imagines himself to be receiving from his spiritual master lessons on The Practice of Humility, and always remember, dear sons, that there is no greater consolation you can give Us than that of seeing you humble, meek, and obedient.</p>
+    </section>
+
+    <section>
+      <h2>Prologue</h2>
+      <p>It is an incontrovertible truth that the proud will meet with no mercy: that the gates of the kingdom of heaven will be closed against them, and that the Lord will open those gates to none but the Humble. To be convinced of this we need simply open Holy Scripture. There we are taught in almost every page, that God resists the proud; that He humbles those who exalt themselves; that we must become like unto little children if we would enter into His glory.</p>
+      <p>Every Christian has contracted in holy Baptism the obligation of walking in the footsteps of Jesus Christ. He is the divine Model to which we should conform our lives. The most important lesson taught us by our Savior is, strictly speaking, this:&mdash;Learn of Me, <em>Discite a Me</em>.</p>
+      <p>Therefore, O disciple of this divine Master, if you would secure this most precious pearl, than which there is no surer pledge of sanctity or more certain token of predestination, receive with docility the counsels which I give you, and faithfully carry them out into practice.</p>
+    </section>
+  </main>
+
+  <div class="cta-row">
+    <a href="treatise.html">Begin the Sixty Counsels &rarr;</a>
+    <a href="/">Back to netroot</a>
   </div>
 
-  <nav class="links">
-    <a href="https://archive.org/details/ThePracticeOfHumility">View on Archive.org</a>
-    <a href="/">Back to netroot</a>
-  </nav>
+  <div class="source-note">
+    Source: <em>The Practice of Humility: A Treatise</em>, Leo XIII, trans. Joseph Jerome Vaughan, O.S.B. (1888).<br>
+    Scan obtained via <a href="https://archive.org/details/ThePracticeOfHumility">archive.org</a>. Public domain.
+  </div>
 </body>
 </html>
