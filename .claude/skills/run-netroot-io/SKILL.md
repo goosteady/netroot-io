@@ -1,6 +1,6 @@
 ---
 name: run-netroot-io
-description: Build, serve, and screenshot netroot.io — a static HTML landing page normally deployed via Docker/nginx to Railway. Use when asked to run netroot-io, start it locally, take a screenshot of it, or verify its nginx redirect rules (/humility, /la-mystique-divine → breviarium.ink).
+description: Build, serve, and screenshot netroot.io — a static HTML landing page normally deployed via Docker/nginx to Railway. Use when asked to run netroot-io, start it locally, or take a screenshot of it.
 ---
 
 netroot-io is a static site (`index.html` + `styles.css`) served in
@@ -48,16 +48,7 @@ Prints the page `<title>`, the screenshot path, and any browser
 console errors (non-empty `CONSOLE_ERRORS` or a crash means something's
 wrong — go look at the screenshot).
 
-3. Verify the redirect rules (these are nginx-specific `return 301`s
-   that a plain static file server won't exercise):
-
-```bash
-curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}\n" http://127.0.0.1:8899/humility
-curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}\n" http://127.0.0.1:8899/la-mystique-divine
-# both → "301 -> https://breviarium.ink/<path>/"
-```
-
-4. Stop nginx when done (`serve.sh` prints this exact line each run):
+3. Stop nginx when done (`serve.sh` prints this exact line each run):
 
 ```bash
 nginx -c /tmp/netroot-io-nginx-test/nginx.conf -p /tmp/netroot-io-nginx-test/ -s stop
@@ -66,13 +57,12 @@ nginx -c /tmp/netroot-io-nginx-test/nginx.conf -p /tmp/netroot-io-nginx-test/ -s
 ## Run (human path)
 
 Open `index.html` directly in a browser, or `python3 -m http.server`
-from the repo root — fine for eyeballing the page, but it won't
-exercise the nginx redirect rules above.
+from the repo root — fine for eyeballing the page.
 
 ## Test
 
 No test suite — this is a static HTML/CSS site with no build step.
-The screenshot + redirect checks above are the verification.
+The screenshot check above is the verification.
 
 ---
 
